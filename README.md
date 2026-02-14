@@ -1,12 +1,11 @@
-# 🚀 Customised Virtual File System (CVFS)
+#  Customised Virtual File System (CVFS)
 
-## 👨‍💻 Author
+## Author
 **Pranav Manoj Narkhede**  
 Technology: **C Programming (System Programming)**  
 
----
 
-# 📌 1. Project Overview
+#  1. Project Overview
 
 The **Customised Virtual File System (CVFS)** is a Linux-like file system simulation built completely in **C language**.
 
@@ -20,21 +19,19 @@ This project mimics the internal working of the Linux File System using:
 
 It provides a **custom shell interface** where users can create, read, write, and delete files just like a real operating system.
 
----
-
-# 🏗️ 2. Architecture Design
+# 2. Architecture Design
 
 The project is designed based on Linux File System Internals.
 
-## 🔹 BootBlock
+## BootBlock
 Stores boot information of CVFS.
 
-## 🔹 SuperBlock
+## SuperBlock
 Maintains:
 - Total Inodes
 - Free Inodes
 
-## 🔹 Inode (Core of File System)
+##  Inode (Core of File System)
 Each file contains:
 - File Name
 - Inode Number
@@ -45,21 +42,19 @@ Each file contains:
 - Permission
 - Data Buffer
 
-## 🔹 File Table
+## File Table
 Stores:
 - Read Offset
 - Write Offset
 - Mode
 - Pointer to Inode
 
-## 🔹 UAREA (User Area)
+## UAREA (User Area)
 Maintains:
 - Process Name
 - User File Descriptor Table (UFDT)
 
----
-
-# 🌟 3. Key Features
+# 3. Key Features
 
 ✅ Custom Shell Interface  
 ✅ Linux-like Commands  
@@ -70,9 +65,7 @@ Maintains:
 ✅ File Descriptor Management  
 ✅ Platform Independent  
 
----
-
-# 🔥 4. Backup Feature (Data Loss Prevention)
+# 4. Backup Feature (Data Loss Prevention)
 
 ⚠️ IMPORTANT:
 
@@ -83,28 +76,25 @@ That means:
 - If you close the program without backup,
 - All created files and data will be permanently lost.
 
----
-
-## 💾 Data Loss Prevention System
+##  Data Loss Prevention System
 
 Before exiting the program, user is asked:
 
 Do you want to store that file Y/N :
 
-### ✅ If user selects Y (Yes):
+###  If user selects Y (Yes):
 - `SaveFile()` function is executed
 - All in-memory files are saved to local machine
 - Files are stored permanently
 - Data is preserved
 
-### ❌ If user selects N (No):
+###  If user selects N (No):
 - All allocated memory is deallocated
 - All data is lost
 - Program terminates
 
----
 
-## 🛠️ Backup Function Used
+##  Backup Function Used
 
 ```c
 void SaveFile()
@@ -116,9 +106,7 @@ This function:
 - Writes buffer data into local files
 - Prevents data loss
 
----
-
-# 📌 5. Supported Commands
+# 5. Supported Commands
 
 | Command | Description |
 |----------|------------|
@@ -132,9 +120,7 @@ This function:
 | clear | Clear terminal |
 | exit | Exit CVFS |
 
----
-
-# 🔐 Permission Model
+#  Permission Model
 
 | Value | Permission |
 |-------|------------|
@@ -142,9 +128,7 @@ This function:
 | 2 | WRITE |
 | 3 | READ + WRITE |
 
----
-
-# ⚙️ 6. How To Compile & Execute
+#  6. How To Compile & Execute
 
 ## Step 1: Compile
 
@@ -162,9 +146,8 @@ After running:
 
 ----- Pranav CVFS started successfully -----
 
----
 
-# 📖 7. How To Explore Using Help Option
+#  7. How To Explore Using Help Option
 
 Inside the shell, type:
 
@@ -184,9 +167,7 @@ man read
 
 This makes it easy for users to explore functionality.
 
----
-
-# 🧪 8. Demo Execution
+#  8. Demo Execution
 
 ```bash
 
@@ -251,9 +232,7 @@ Do you want to store that file Y/N : Y
 File backup complete
 ```
 
----
-
-# 🧠 9. Learning Outcomes
+# 9. Learning Outcomes
 
 This project demonstrates:
 
